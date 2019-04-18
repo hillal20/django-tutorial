@@ -1,0 +1,14 @@
+{% extends 'baseLayout.html'%} {% block content %}
+<h3>Article detail is Here</h3>
+<div class="articleDetail">
+
+  <div class="article">
+    <hi>hello</hi>
+    <h2>{{article.title}}</h2>
+    <h4>{{article.body}}</h4>
+    <p>{{article.date}}</p>
+    <img src "{{article.thumb.url}}"/>
+  </div>
+
+</div>
+{% endblock%}

@@ -1,0 +1,15 @@
+{% extends 'baseLayout.html'%} {% block content %}
+<h3>Articles are Here</h3>
+<div class="articles">
+  {% for article in articles %}
+  <div class="article">
+    <h2>
+      <a href="{%  url 'article:detail' slug=article.slug %}">{{article.title}}</a>
+    </h2>
+    <h4>{{article.snippet}}</h4>
+    <p>{{article.date}}</p>
+    <img src "{{article.thumb.url}}"/>
+  </div>
+  {% endfor%}
+</div>
+{% endblock%}
